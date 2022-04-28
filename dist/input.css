@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-animation {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 6s infinite linear;
+    animation: hue 6s infinite linear;
+}
+
+/* a {
+  box-shadow: 0 10px 15px 0px rgb(56 0 189 / 20%);
+} */
+
+h1 {
+  -webkit-animation:  hue 6s infinite linear;
+  animation:  hue 6s infinite linear;
+}
+
+a svg {
+  animation:  2s infinite arrowanim;
+}
+
+a:hover span {
+  right: -80px;
+}
+
+header.sticky {
+  @apply  bg-white h-[65px]
+}
+
+.dark header.sticky {
+  @apply  bg-black h-[65px]
+}
+
+@keyframes hue {
+from {background-position:0 0;  }
+to {background-position: 2000px 0;} }
+
+@keyframes arrowanim{
+0%{ transform: translate(0, 0); }
+50%{ transform: translate(8px, 0); }
+100%{ transform: translate(0, 0); }
+}
