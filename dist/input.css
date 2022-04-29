@@ -15,9 +15,22 @@
   box-shadow: 0 10px 15px 0px rgb(56 0 189 / 20%);
 } */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-poppins
+}
+
 h1 {
   -webkit-animation:  hue 6s infinite linear;
   animation:  hue 6s infinite linear;
+}
+
+p {
+  @apply leading-7
 }
 
 a svg {
@@ -36,6 +49,30 @@ header.sticky {
   @apply  bg-black h-[65px]
 }
 
+#menu-toggler.active span {
+  @apply top-[50%]
+}
+
+#menu-toggler.active .top {
+  @apply rotate-45
+}
+
+#menu-toggler.active .middle,
+#menu-toggler.active .bottom {
+  @apply -rotate-45
+}
+
+.nav-wrapper.show {
+  width: 100vw;
+}
+
+.nav-wrapper.show::after {
+  display: block;
+}
+
+.nav-wrapper.show .nav {
+  transform: translate3d(0,0,0) !important;
+}
 @keyframes hue {
 from {background-position:0 0;  }
 to {background-position: 2000px 0;} }

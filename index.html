@@ -7,10 +7,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="./node_modules/animate.css/animate.css">
   <!-- Output CSS /don't change this/ -->
   <link rel="stylesheet" href="./dist/output.css">
 </head>
-<body class="font-openSans">
+<body class="font-openSans text-slate-600 dark:text-gray-400">
   <!-- Header -->
   <header id="header" class="h-[85px] flex items-center fixed top-0 right-0 left-0 z-50 border-b border-white/10 transition-all duration-[1s]">
     <div class="container">
@@ -41,27 +43,48 @@
               <a href="#" class="relative text-sm font-openSans font-normal px-5 leading-9 rounded-[100px] bg-blue-gradient text-white shadow-btn">Connect Wallet</a>
             </li>
             <!-- Menu Toggler -->
-            <li class="w-[20px] ml-3 lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+            <li id="menu-toggler" class="relative w-[30px] h-[30px] ml-3 cursor-pointer lg:hidden">
+              <span class="top absolute w-[25px] h-[3px] top-[20%] transition-all duration-300 bg-black"></span>
+              <span class="middle absolute w-[25px] h-[3px] top-[50%] transition-all duration-300 bg-black"></span>
+              <span class="bottom absolute w-[25px] h-[3px] top-[80%] transition-all duration-300 bg-black"></span>
             </li>
           </ul>
         </div>
-        
       </div>
-      
     </div>
   </header>
   <!-- Header -->
 
+  <!-- Mobile Nav -->
+  <div class="nav-wrapper lg:hidden w-[0px] fixed h-[100vh] z-[9998] top-0 left-0 box-border transition-transform after:fixed after:content-[''] after:top-0 after:left-0 after:right-0 after:bottom-0 after:bg  after:bg-black/50 after:w-full after:h-full after:hidden">
+    <div class="nav  fixed h-full top-0 left-0 w-[280px] z-[9999] bg-black translate-x-[-300px] transition-transform duration-300">
+      <h2 class="text-black bg-white px-5 py-4 text-xl font-poppins font-normal">Mobile Menu</h2>
+      <ul class="nav-links">
+        <li><a href="#" class="block p-4 text-white text-sm ">Home</a></li>
+        <li><a href="#" class="block p-4 text-white text-sm ">Marketplace</a></li>
+        <li><a href="#" class="block p-4 text-white text-sm ">Office</a></li>
+        <li><a href="#" class="block p-4 text-white text-sm ">Toplist</a></li>
+        <li><a href="#" class="block p-4 text-white text-sm ">Budget</a></li>
+        <li><a href="#" class="block p-4 text-white text-sm ">Help</a></li>
+      </ul>
+      <div id="close" class="absolute top-0 right-0 w-[60px] h-[60px] flex justify-center items-center hover:bg-black hover:text-white cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Nav -->
+
   <!-- Hero Section -->
-  <section class="bg-gradient bg-center bg-no-repeat bg-cover relative pt-[120px] pb-20 h-auto lg:pt-[100px] lg:pb-[100px] lg:h-[750px] 2xl:h-[100vh] dark:bg-none dark:bg-black">
+  <section class="bg-hero-gradient bg-center bg-no-repeat bg-cover relative pt-[120px] pb-20 h-auto lg:pt-[100px] lg:pb-[100px] lg:h-[750px] 2xl:h-[100vh] dark:bg-none dark:bg-black">
     <div class="container">
       <div class="lg:flex items-center">
         <div class="lg:w-6/12 self-center">
-          <h1 class="text-[38px] leading-[50px] mb-[30px] text-center lg:text-[45px] xl:text-[50px] lg:leading-[57px] lg:text-left font-bold font-poppins bg-heading-bg visible delay-200 text-animation wow fadeInUp" data-wow-delay=".2s">Tycoon NFTs With Upgradable Metadata</h1>
-          <p class="text-lg leading-7 text-center mb-[35px] lg:text-left lg:text-xl lg:leading-[30px] text-slate-600 dark:text-gray-400 wow fadeInUp" data-wow-delay=".4s">10,000 Tycoons are headed to the metaverse after news of untapped business opportunities! Tycoons come in all shapes and sizes.</p>
+          <h1 class="text-[38px] leading-[50px] mb-[30px] text-center lg:text-[45px] xl:text-[50px] lg:leading-[57px] lg:text-left font-bold font-poppins bg-heading-gradient visible delay-200 text-animation wow animate__animated animate__fadeInUp" data-wow-delay=".2s">Tycoon NFTs With Upgradable Metadata</h1>
+          <p class="text-lg leading-7 text-center mb-[35px] lg:text-left lg:text-xl lg:leading-[30px] text-slate-600 dark:text-gray-400 wow animate__animated animate__fadeInUp" data-wow-delay=".4s">10,000 Tycoons are headed to the metaverse after news of untapped business opportunities! Tycoons come in all shapes and sizes.</p>
           <!-- button -->
-          <a href="#" class="w-max my-0 mx-auto flex items-center lg:inline-flex lg:justify-center lg:whitespace-nowrap lg:items-center text-[16px] font-normal font-poppins py-4 px-8  text-center outline-none rounded-[100px] bg-blue-gradient text-white relative overflow-hidden shadow-btn">
+          <a href="#" class="w-max my-0 mx-auto flex items-center lg:inline-flex lg:justify-center lg:whitespace-nowrap lg:items-center text-[16px] font-normal font-poppins py-4 px-8  text-center outline-none rounded-[100px] bg-blue-gradient text-white relative overflow-hidden shadow-btn wow animate__animated animate__fadeInUp" data-wow-delay=".6s">
           Open App
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
@@ -69,7 +92,7 @@
             <span class="block absolute top-[-10%] right-[-130px] w-[200px] h-[200px] rounded-[50%] bg-[rgb(255,255,255,.2)] duration-[1s] transition-all"></span>
           </a>
         <!-- button -->
-        <a href="#" class="w-max mt-4 mx-auto flex items-center lg:inline-flex lg:justify-center lg:whitespace-nowrap lg:items-center text-[16px] font-normal font-poppins py-4 px-8  text-center outline-none rounded-[100px] bg-red-gradient text-white relative overflow-hidden shadow-btn">
+        <a href="#" class="w-max mt-4 mx-auto flex items-center lg:inline-flex lg:justify-center lg:whitespace-nowrap lg:items-center text-[16px] font-normal font-poppins py-4 px-8  text-center outline-none rounded-[100px] bg-red-gradient text-white relative overflow-hidden shadow-btn wow animate__animated animate__fadeInUp" data-wow-delay=".6s">
           Mint Tycoon 
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
@@ -88,8 +111,141 @@
   </section>
   <!-- Hero Section -->
 
+  <!-- Statistics -->
+  <section class="py-7 bg-section-gradient dark:bg-none dark:bg-[#151515]">
+    <div class="container">
+      <div class="sm:flex justify-between items-center flex-wrap">
+        <div class="flex sm:w-1/2 lg:w-3/12 mb-7 lg:mb-0 items-center justify-start">
+          <div class="w-[80px] h-[80px] p-4 bg-white rounded-tl-[8px] rounded-tr-[40px] rounded-br-[8px] rounded-bl-[40px]">
+            <img src="./dist/images/businesses-head.png" alt="business">
+          </div>
+          <div class="ml-5">
+            <h4 class="text-[35px] font-poppins font-bold text-slate-900 dark:text-slate-200">$ <span>0.14</span></h4>
+            <p class="text-lg font-medium leading-6">Biz Price</p>
+          </div>
+        </div>
+        <div class="flex sm:w-1/2 lg:w-3/12 mb-7 lg:mb-0 items-center justify-start">
+          <div class="w-[80px] h-[80px] p-4 bg-white rounded-tl-[8px] rounded-tr-[40px] rounded-br-[8px] rounded-bl-[40px]">
+            <img src="./dist/images/dollar-head.png" alt="dollar">
+          </div>
+          <div class="ml-5">
+            <h4 class="text-[35px] font-poppins font-bold text-slate-900 dark:text-slate-200">$ <span>0.001</span></h4>
+            <p class="text-lg font-medium leading-6">Dollar Price</p>
+          </div>
+        </div>
+        <div class="flex sm:w-1/2 lg:w-3/12 mb-7 sm:mb-0 items-center justify-start">
+          <div class="w-[80px] h-[80px] p-4 bg-white rounded-tl-[8px] rounded-tr-[40px] rounded-br-[8px] rounded-bl-[40px]">
+            <img src="./dist/images/network.svg" alt="network">
+          </div>
+          <div class="ml-5">
+            <h4 class="text-[35px] font-poppins font-bold text-slate-900 dark:text-slate-200">
+              <span class="text-[35px] text-green-700">●</span>
+              <span>50</span>
+            </h4>
+            <p class="text-lg font-medium leading-6">Network Fees</p>
+          </div>
+        </div>
+        <div class="flex sm:w-1/2 lg:w-3/12 items-center justify-start">
+          <div class="w-[80px] h-[80px] p-4 bg-white rounded-tl-[8px] rounded-tr-[40px] rounded-br-[8px] rounded-bl-[40px]">
+            <img src="./dist/images/avax-logo.svg" alt="avax">
+          </div>
+          <div class="ml-5">
+            <h4 class="text-[35px] font-poppins font-bold text-slate-900 dark:text-slate-200">$ <span>85.18</span></h4>
+            <p class="text-lg font-medium leading-6">Avalanche Price</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Statistics -->
 
+  <!-- About Us -->
+  <section class="bg-section-gradient dark:bg-none dark:bg-black py-[60px] sm:py-[80px] lg:py-[100px]">
+    <div class="container">
+      <div class="lg:flex justify-between gap-16">
+        <div class="wow animate__animated animate__fadeInUp relative mb-8 lg:mb-0 lg:w-4/12 before:absolute before:content-[''] before:z-0 before:w-[50%] before:h-[50%] before:bg-pseudo-gradient before:bottom-[-10px] before:left-[-10px] before:rounded-bl-[8px] after:absolute after:content-[''] after:z-0 after:w-[50%] after:h-[50%] after:bg-pseudo-gradient after:top-[-10px] after:right-[-10px] after:rounded-tr-[8px]" data-wow-offset="10">
+          <img class="relative w-full h-full z-10 rounded-lg m-auto object-cover" src="./dist/images/graphic-design.png" alt="graphic-design">
+        </div>
+        <div class="lg:w-8/12 text-center lg:text-left">
+          <span class="text-pink-600 text-[16px] font-normal uppercase mb-4 block">Overview</span>
+          <h2 class="text-[34px] md:text-[40px] text-slate-900 dark:text-white font-semibold font-poppins mb-5">About Us</h2>
+          <p class="text-lg leading-7">Our goal is to change the narrative in NFT space from just a profile picture, to a multi-utility     asset that evolves with strategy and complexity as the game plays on. From our roots with Vending Machines we maintain an honest and fair system with holders first on our minds. 
+            <br>
+            <br>
+            As we are building this community, it's establishing itself as an umbrella to many more NFT projects to come. An NFT collection by the community for the community!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Us -->
+
+  <!-- Features -->
+  <section class="bg-section-gradient dark:bg-none dark:bg-black py-[60px] sm:py-[80px] lg:py-[100px]">
+    <div class="container">
+      <div class="text-center xl:w-1/2 m-auto">
+        <span class="text-pink-600 text-[16px] font-normal uppercase mb-4 block">Thats so cool</span>
+        <h2 class="text-[34px] md:text-[40px] text-slate-900 dark:text-white font-semibold font-poppins mb-5">Our Features</h2>
+        <p class="text-lg leading-7 font-normal">Our tri-token ecosystem has been tested time and time again to provide a fun spin on the boring DeFi experience. You might even learn a little about economics on your journey.</p>
+      </div>
+      <!-- row -->
+      <div class="md:flex justify-between text-center md:text-left mt-14 gap-9">
+        <!-- card -->
+        <div class="md:flex md:w-1/2 px-5 py-7 md:px-4 md:py-12 gap-5 bg-white dark:bg-[#191919] border border-[#d4f0ff] dark:border-[#191919] rounded-lg mb-8 md:mb-0 shadow-card wow animate__animated animate__fadeInUp" data-wow-delay=".2s" data-wow-offset="10">
+          <div class="max-w-[150px] m-auto md:m-0 ">
+            <img class="m-auto w-full" src="./dist/images/globe.png" alt="Globe">
+          </div>
+          <div>
+            <h4 class="text-xl md:text-[22px] mb-4text-slate-900 dark:text-white font-semibold mt-5 md:mt-0">MarketPlace</h4>
+            <p class="text-lg leading-7 font-normal">Mint sold out? You are not too late! Our NFT marketplace makes VM Tycoon a one-stop shop for your playing needs. Get that Epic you deserve.</p>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="md:flex md:w-1/2 px-5 py-7 md:px-4 md:py-12 gap-5 bg-white dark:bg-[#191919] border border-[#d4f0ff] dark:border-[#191919] rounded-lg mb-8 md:mb-0 shadow-card wow animate__animated animate__fadeInUp" data-wow-delay=".4s" data-wow-offset="10">
+          <div class="max-w-[150px] m-auto md:m-0 ">
+            <img class="m-auto w-full" src="./dist/images/community.png" alt="community">
+          </div>
+          <div>
+            <h4 class="text-xl md:text-[22px] mb-4text-slate-900 dark:text-white font-semibold mt-5 md:mt-0">Community</h4>
+            <p class="text-lg leading-7 font-normal">The Vending Machine community is a collection of great people that love to chat about all things crypto. Come join us on Discord!</p>
+          </div>
+        </div>
+      </div>
+      <!-- row -->
+      <div class="md:flex justify-between text-center md:text-left mt-9 gap-9">
+        <!-- card -->
+        <div class="md:flex md:w-1/2 px-5 py-7 md:px-4 md:py-12 gap-5 bg-white dark:bg-[#191919] border border-[#d4f0ff] dark:border-[#191919] rounded-lg mb-8 md:mb-0 shadow-card wow animate__animated animate__fadeInUp" data-wow-delay=".6s" data-wow-offset="10">
+          <div class="max-w-[150px] m-auto md:m-0 ">
+            <img class="m-auto w-full" src="./dist/images/marketplace.png" alt="marketplace">
+          </div>
+          <div>
+            <h4 class="text-xl md:text-[22px] mb-4 text-slate-900 dark:text-white font-semibold mt-5 md:mt-0">Marketplace</h4>
+            <p class="text-lg leading-7 font-normal">Mint sold out? You are not too late! Our NFT marketplace makes VM Tycoon a one-stop shop for your playing needs. Get that Epic you deserve.</p>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="md:flex md:w-1/2 px-5 py-7 md:px-4 md:py-12 gap-5 bg-white dark:bg-[#191919] border border-[#d4f0ff] dark:border-[#191919] rounded-lg shadow-card wow animate__animated animate__fadeInUp" data-wow-delay=".8s" data-wow-offset="10">
+          <div class="max-w-[150px] m-auto md:m-0 ">
+            <img class="m-auto w-full" src="./dist/images/uniqe.png" alt="uniqe">
+          </div>
+          <div>
+            <h4 class="text-xl md:text-[22px] mb-4 text-slate-900 dark:text-white font-semibold mt-5 md:mt-0">Uniqe NFTs</h4>
+            <p class="text-lg leading-7 font-normal">Our 10,000 algorithmically generated, unique Tycoon NFT’s are no ordinary high rollers. They’re upgradable!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Features -->
+
+
+  <!-- WOW JS -->
+  
   <!-- MAIN JS -->
   <script src="./dist/main.js"></script>
+  <script src="./node_modules/wow.js/dist/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </body>
 </html>
