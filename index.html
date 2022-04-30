@@ -1,18 +1,18 @@
 <!doctype html>
-<html>
+<html class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;900&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
   <!-- Animate CSS -->
   <link rel="stylesheet" href="./node_modules/animate.css/animate.css">
   <!-- Output CSS /don't change this/ -->
   <link rel="stylesheet" href="./dist/output.css">
 </head>
-<body class="font-openSans text-slate-600 dark:text-gray-400">
+<body class="font-openSans text-slate-600 dark:text-gray-400 overflow-x-clip">
   <!-- Header -->
   <header id="header" class="h-[85px] flex items-center fixed top-0 right-0 left-0 z-50 border-b border-white/10 transition-all duration-[1s]">
     <div class="container">
@@ -40,13 +40,16 @@
               </div>
             </li>
             <li class="inline-flex">
-              <a href="#" class="relative text-sm font-openSans font-normal px-5 leading-9 rounded-[100px] bg-blue-gradient text-white shadow-btn">Connect Wallet</a>
+              <a href="#" class="relative text-sm font-openSans font-normal px-5 leading-9 rounded-[100px] bg-blue-gradient text-white shadow-btn overflow-clip">
+                Connect Wallet
+                <span class="block absolute top-[-10%] right-[-130px] w-[200px] h-[200px] rounded-[50%] bg-[rgb(255,255,255,.2)] duration-[1s] transition-all"></span>
+              </a>
             </li>
             <!-- Menu Toggler -->
             <li id="menu-toggler" class="relative w-[30px] h-[30px] ml-3 cursor-pointer lg:hidden">
-              <span class="top absolute w-[25px] h-[3px] top-[20%] transition-all duration-300 bg-black"></span>
-              <span class="middle absolute w-[25px] h-[3px] top-[50%] transition-all duration-300 bg-black"></span>
-              <span class="bottom absolute w-[25px] h-[3px] top-[80%] transition-all duration-300 bg-black"></span>
+              <span class="top absolute w-[25px] h-[3px] top-[20%] transition-all duration-300 bg-black-900 dark:bg-white "></span>
+              <span class="middle absolute w-[25px] h-[3px] top-[50%] transition-all duration-300 bg-black-900 dark:bg-white"></span>
+              <span class="bottom absolute w-[25px] h-[3px] top-[80%] transition-all duration-300 bg-black-900 dark:bg-white"></span>
             </li>
           </ul>
         </div>
@@ -56,9 +59,9 @@
   <!-- Header -->
 
   <!-- Mobile Nav -->
-  <div class="nav-wrapper lg:hidden w-[0px] fixed h-[100vh] z-[9998] top-0 left-0 box-border transition-transform after:fixed after:content-[''] after:top-0 after:left-0 after:right-0 after:bottom-0 after:bg  after:bg-black/50 after:w-full after:h-full after:hidden">
-    <div class="nav  fixed h-full top-0 left-0 w-[280px] z-[9999] bg-black translate-x-[-300px] transition-transform duration-300">
-      <h2 class="text-black bg-white px-5 py-4 text-xl font-poppins font-normal">Mobile Menu</h2>
+  <div class="nav-wrapper lg:hidden w-[0px] fixed h-[100vh] z-[9998] top-0 left-0 box-border transition-transform after:fixed after:content-[''] after:top-0 after:left-0 after:right-0 after:bottom-0 after:bg  after:bg-black-900/50 after:w-full after:h-full after:hidden">
+    <div class="nav  fixed h-full top-0 left-0 w-[280px] z-[9999] bg-black-900 translate-x-[-300px] transition-transform duration-300">
+      <h2 class="text-black-900 bg-white px-5 py-4 text-xl font-poppins font-normal">Mobile Menu</h2>
       <ul class="nav-links">
         <li><a href="#" class="block p-4 text-white text-sm ">Home</a></li>
         <li><a href="#" class="block p-4 text-white text-sm ">Marketplace</a></li>
@@ -67,7 +70,7 @@
         <li><a href="#" class="block p-4 text-white text-sm ">Budget</a></li>
         <li><a href="#" class="block p-4 text-white text-sm ">Help</a></li>
       </ul>
-      <div id="close" class="absolute top-0 right-0 w-[60px] h-[60px] flex justify-center items-center hover:bg-black hover:text-white cursor-pointer">
+      <div id="close" class="absolute top-0 right-0 w-[60px] h-[60px] flex justify-center items-center hover:bg-black-900 text-black-900 hover:text-white cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
         </svg>
@@ -77,14 +80,14 @@
   <!-- Mobile Nav -->
 
   <!-- Hero Section -->
-  <section class="bg-hero-gradient bg-center bg-no-repeat bg-cover relative pt-[120px] pb-20 h-auto lg:pt-[100px] lg:pb-[100px] lg:h-[750px] 2xl:h-[100vh] dark:bg-none dark:bg-black">
+  <section class="bg-hero-gradient bg-center bg-no-repeat bg-cover relative pt-[120px] pb-20 h-auto lg:pt-[100px] lg:pb-[100px] lg:h-[750px] 2xl:h-[100vh] dark:bg-none dark:bg-black-900">
     <div class="container">
       <div class="lg:flex items-center">
         <div class="lg:w-6/12 self-center">
-          <h1 class="text-[38px] leading-[50px] mb-[30px] text-center lg:text-[45px] xl:text-[50px] lg:leading-[57px] lg:text-left font-bold font-poppins bg-heading-gradient visible delay-200 text-animation wow animate__animated animate__fadeInUp" data-wow-delay=".2s">Tycoon NFTs With Upgradable Metadata</h1>
+          <h1 class="text-[30px] leading-[40px] md:text-[38px] md:leading-[50px] mb-[30px] text-center lg:text-[45px] xl:text-[50px] lg:leading-[57px] lg:text-left font-bold font-poppins bg-heading-gradient visible delay-200 text-animation wow animate__animated animate__fadeInUp" data-wow-delay=".2s">Tycoon NFTs With Upgradable Metadata</h1>
           <p class="text-lg leading-7 text-center mb-[35px] lg:text-left lg:text-xl lg:leading-[30px] text-slate-600 dark:text-gray-400 wow animate__animated animate__fadeInUp" data-wow-delay=".4s">10,000 Tycoons are headed to the metaverse after news of untapped business opportunities! Tycoons come in all shapes and sizes.</p>
           <!-- button -->
-          <a href="#" class="w-max my-0 mx-auto flex items-center lg:inline-flex lg:justify-center lg:whitespace-nowrap lg:items-center text-[16px] font-normal font-poppins py-4 px-8  text-center outline-none rounded-[100px] bg-blue-gradient text-white relative overflow-hidden shadow-btn wow animate__animated animate__fadeInUp" data-wow-delay=".6s">
+          <a href="#" class="btn w-max my-0 mx-auto flex items-center lg:inline-flex lg:justify-center lg:whitespace-nowrap lg:items-center text-[16px] font-normal font-poppins py-4 px-8  text-center outline-none rounded-[100px] bg-blue-gradient text-white relative overflow-hidden shadow-btn wow animate__animated animate__fadeInUp" data-wow-delay=".6s">
           Open App
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
@@ -92,7 +95,7 @@
             <span class="block absolute top-[-10%] right-[-130px] w-[200px] h-[200px] rounded-[50%] bg-[rgb(255,255,255,.2)] duration-[1s] transition-all"></span>
           </a>
         <!-- button -->
-        <a href="#" class="w-max mt-4 mx-auto flex items-center lg:inline-flex lg:justify-center lg:whitespace-nowrap lg:items-center text-[16px] font-normal font-poppins py-4 px-8  text-center outline-none rounded-[100px] bg-red-gradient text-white relative overflow-hidden shadow-btn wow animate__animated animate__fadeInUp" data-wow-delay=".6s">
+        <a href="#" class="btn w-max mt-4 mx-auto flex items-center lg:inline-flex lg:justify-center lg:whitespace-nowrap lg:items-center text-[16px] font-normal font-poppins py-4 px-8  text-center outline-none rounded-[100px] bg-red-gradient text-white relative overflow-hidden shadow-btn wow animate__animated animate__fadeInUp" data-wow-delay=".6s">
           Mint Tycoon 
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
@@ -120,7 +123,7 @@
             <img src="./dist/images/businesses-head.png" alt="business">
           </div>
           <div class="ml-5">
-            <h4 class="text-[35px] font-poppins font-bold text-slate-900 dark:text-slate-200">$ <span>0.14</span></h4>
+            <h4 class="text-[30px] md:text-[35px]  font-poppins font-bold text-slate-900 dark:text-slate-200">$ <span>0.14</span></h4>
             <p class="text-lg font-medium leading-6">Biz Price</p>
           </div>
         </div>
@@ -129,7 +132,7 @@
             <img src="./dist/images/dollar-head.png" alt="dollar">
           </div>
           <div class="ml-5">
-            <h4 class="text-[35px] font-poppins font-bold text-slate-900 dark:text-slate-200">$ <span>0.001</span></h4>
+            <h4 class="text-[30px] md:text-[35px]  font-poppins font-bold text-slate-900 dark:text-slate-200">$ <span>0.001</span></h4>
             <p class="text-lg font-medium leading-6">Dollar Price</p>
           </div>
         </div>
@@ -138,8 +141,8 @@
             <img src="./dist/images/network.svg" alt="network">
           </div>
           <div class="ml-5">
-            <h4 class="text-[35px] font-poppins font-bold text-slate-900 dark:text-slate-200">
-              <span class="text-[35px] text-green-700">●</span>
+            <h4 class="text-[30px] md:text-[35px]  font-poppins font-bold text-slate-900 dark:text-slate-200">
+              <span class="text-[30px] md:text-[35px]  text-green-700">●</span>
               <span>50</span>
             </h4>
             <p class="text-lg font-medium leading-6">Network Fees</p>
@@ -150,7 +153,7 @@
             <img src="./dist/images/avax-logo.svg" alt="avax">
           </div>
           <div class="ml-5">
-            <h4 class="text-[35px] font-poppins font-bold text-slate-900 dark:text-slate-200">$ <span>85.18</span></h4>
+            <h4 class="text-[30px] md:text-[35px] font-poppins font-bold text-slate-900 dark:text-slate-200">$ <span>85.18</span></h4>
             <p class="text-lg font-medium leading-6">Avalanche Price</p>
           </div>
         </div>
@@ -160,7 +163,7 @@
   <!-- Statistics -->
 
   <!-- About Us -->
-  <section class="bg-section-gradient dark:bg-none dark:bg-black py-[60px] sm:py-[80px] lg:py-[100px]">
+  <section class="bg-section-gradient dark:bg-none dark:bg-black-900 py-[60px] sm:py-[80px] lg:py-[100px]">
     <div class="container">
       <div class="lg:flex justify-between gap-16">
         <div class="wow animate__animated animate__fadeInUp relative mb-8 lg:mb-0 lg:w-4/12 before:absolute before:content-[''] before:z-0 before:w-[50%] before:h-[50%] before:bg-pseudo-gradient before:bottom-[-10px] before:left-[-10px] before:rounded-bl-[8px] after:absolute after:content-[''] after:z-0 after:w-[50%] after:h-[50%] after:bg-pseudo-gradient after:top-[-10px] after:right-[-10px] after:rounded-tr-[8px]" data-wow-offset="10">
@@ -168,7 +171,7 @@
         </div>
         <div class="lg:w-8/12 text-center lg:text-left">
           <span class="text-pink-600 text-[16px] font-normal uppercase mb-4 block">Overview</span>
-          <h2 class="text-[34px] md:text-[40px] text-slate-900 dark:text-white font-semibold font-poppins mb-5">About Us</h2>
+          <h2 class="text-[26px] leading-[26px] sm:text-[34px] sm:leading-[44px] md:text-[40px] md:leading-[52px] text-slate-900 dark:text-white font-semibold  mb-5">About Us</h2>
           <p class="text-lg leading-7">Our goal is to change the narrative in NFT space from just a profile picture, to a multi-utility     asset that evolves with strategy and complexity as the game plays on. From our roots with Vending Machines we maintain an honest and fair system with holders first on our minds. 
             <br>
             <br>
@@ -181,11 +184,11 @@
   <!-- About Us -->
 
   <!-- Features -->
-  <section class="bg-section-gradient dark:bg-none dark:bg-black py-[60px] sm:py-[80px] lg:py-[100px]">
+  <section class="bg-section-gradient dark:bg-none dark:bg-black-900 py-[60px] sm:py-[80px] lg:py-[100px]">
     <div class="container">
       <div class="text-center xl:w-1/2 m-auto">
         <span class="text-pink-600 text-[16px] font-normal uppercase mb-4 block">Thats so cool</span>
-        <h2 class="text-[34px] md:text-[40px] text-slate-900 dark:text-white font-semibold font-poppins mb-5">Our Features</h2>
+        <h2 class="text-[26px] leading-[26px] sm:text-[34px] sm:leading-[44px] md:text-[40px] md:leading-[52px] text-slate-900 dark:text-white font-semibold  mb-5">Our Features</h2>
         <p class="text-lg leading-7 font-normal">Our tri-token ecosystem has been tested time and time again to provide a fun spin on the boring DeFi experience. You might even learn a little about economics on your journey.</p>
       </div>
       <!-- row -->
@@ -238,11 +241,232 @@
   </section>
   <!-- Features -->
 
+  <!-- Minted -->
+  <section class="bg-section-gradient dark:bg-none dark:bg-black-900 py-[60px] sm:py-[80px] lg:py-[100px]">
+    <div class="container">
+      <div class="text-center xl:w-1/2 m-auto">
+        <span class="text-pink-600 text-[16px] font-openSans font-black leading-4 tracking-wider uppercase mb-4 block">10000 of 10,000 Tycoons minted</span>
+        <h2 class="text-[26px] leading-[26px] sm:text-[34px] sm:leading-[44px] md:text-[40px] md:leading-[52px] text-slate-900 dark:text-white font-black  mb-5">Mint Your Own VM Tycoon</h2>
+        <div class="relative mt-10 mb-5 max-w-[400px] m-auto">
+          <img class="max-w-full m-auto" src="./dist/images/minted.png" alt="MInted">
+        </div>
+        <p class="text-lg leading-7 font-normal">Sold out. The VM Tycoon collection is limited to 10,000 unique NFT’s. Once all have been minted, you’ll have to purchase through the Marketplace. </p>
+    </div>
+  </section>
+  <!-- Minted -->
 
-  <!-- WOW JS -->
-  
+  <!-- Vision -->
+  <section class="bg-white dark:bg-none dark:bg-black-900 py-[60px] sm:py-[80px] lg:py-[100px]">
+    <div class="container">
+      <div class="lg:flex justify-between gap-16">
+        <div class="lg:w-8/12 text-center lg:text-left">
+          <span class="text-pink-600 text-[16px] font-normal uppercase mb-4 block">Vision</span>
+          <h2 class="text-[26px] leading-[26px] sm:text-[34px] sm:leading-[44px] md:text-[40px] md:leading-[52px] text-slate-900 dark:text-white font-semibold  mb-5">Our Vision</h2>
+          <p class="text-lg leading-7">Our inspiration for this project was Chikn. The well thought out ecosystem and balance was inspirational in our vision. We wanted to duplicate that success and bring the same experience to people that might have missed the boat. VM Tycoon is just the beginning.
+          </p>
+          <h5 class="text-lg leading-7 md:text-xl font-semibold text-slate-900 dark:text-white my-5">Vision Statement</h5>
+          <ul class="list-[circle] text-left mb-16 lg:mb-0 ml-4">
+            <li class="leading-8">Create a tri-token foundation for future utility</li>
+            <li class="leading-8">Transparency and honesty at all levels of the game</li>
+            <li class="leading-8">Provide the best community support</li>
+            <li class="leading-8">Fund liquidity to stabilize project volatility</li>
+            <li class="leading-8">Create a fun environment to play, chat and relax</li>
+          </ul>
+        </div>
+        <div class="wow animate__animated animate__fadeInUp relative mb-8 lg:mb-0 lg:w-4/12 max-w-[512px] mx-auto before:absolute before:content-[''] before:w-[150px] before:h-[150px] before:right-[-55px] before:bottom-[-55px] before:z-0 before:bg-shape-2 before:bg-auto before:bg-no-repeat dark:before:opacity-30 after:absolute after:content-[''] after:w-[150px] after:h-[150px] after:left-[-55px] after:top-[-55px] after:z-0 after:bg-shape-1 after:bg-auto after:bg-no-repeat dark:after:opacity-30" data-wow-offset="10">
+          <img class="relative w-full h-full z-10 rounded-lg m-auto object-cover shadow-image dark:shadow-none" src="./dist/images/vision.png" alt="Vision">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Vision -->
+
+  <!-- Road Map -->
+  <section  class="bg-white dark:bg-none dark:bg-black-900 py-[60px] sm:py-[80px] lg:py-[100px]">
+    <div class="container">
+      <div class="text-center xl:w-1/2 m-auto">
+        <span class="text-pink-600 text-[16px] font-normal uppercase mb-4 block">As time goes by</span>
+        <h2 class="text-[26px] leading-[26px] sm:text-[34px] sm:leading-[44px] md:text-[40px] md:leading-[52px] text-slate-900 dark:text-white font-semibold  mb-14">Our Roadmap</h2>
+      </div>
+      <!-- timeline -->
+      <div class="relative after:absolute after:content-[''] after:top-0 after:right-[50%] after:ml-[-2px] after:border-r-2 after:border-dashed after:border-blue-600 after:h-full after:hidden lg:after:block">
+        <!-- row 1-->
+        <div class="relative pl-0 lg:pr-[50%] mb-8">
+          <!-- name -->
+          <div class="lg:absolute lg:top-4 lg:right-auto lg:left-[50%] mr-0 lg:ml-6 mb-3 lg:mb-0 text-[22px] font-semibold text-slate-900 dark:text-white">
+            <h5 class="">Project Development</h5>
+            <span class="font-poppins block text-[15px]">Q1 2022</span>
+          </div>
+          <!-- Content -->
+          <div class="relative py-5 px-7 bg-white dark:bg-[#151515] border border-slate-200 dark:border-[#151515] rounded-lg shadow-card lg:mr-10 before:absolute before:content-[''] before:top-5 before:right-[-49px] before:w-5 before:h-5 before:rounded-full before:z-10 before:bg-white dark:before:bg-black-900 before:border-2 before:border-dashed before:border-blue-600 before:hidden lg:before:block after:absolute after:content-[''] after:top-5 after:right-[-8px] after:rotate-45 after:border-l-0 after:border-b-0 after:h-4 after:w-4 after:bg-white dark:after:bg-[#151515] after:border after:border-slate-200 dark:after:border-[#151515] after:hidden lg:after:block">
+            <p>
+              • Development and testing of contracts <br>
+              • Art development for NFT’s, Website & Social Media <br>
+              • Website Development <br>
+              • Establish Social Media
+            </p>
+          </div>
+        </div>
+        <!-- row 2-->
+        <div class="relative pr-0 lg:pl-[50%] mb-8">
+          <!-- name -->
+          <div class="lg:absolute lg:top-4 lg:left-auto lg:right-[50%] mr-0 lg:mr-6 mb-3 lg:mb-0 text-[22px] font-semibold text-slate-900 dark:text-white">
+            <h5 class="">Project Launch</h5>
+            <span class="font-poppins block text-[15px]">Q1 2022</span>
+          </div>
+          <!-- Content -->
+          <div class="relative py-5 px-7 bg-white dark:bg-[#151515] border border-slate-200 dark:border-[#151515] rounded-lg shadow-card lg:ml-10 before:absolute before:content-[''] before:top-5 before:left-[-52px] before:w-5 before:h-5 before:rounded-full before:z-10 before:bg-white dark:before:bg-black-900 before:border-2 before:border-dashed before:border-blue-600 before:hidden lg:before:block after:absolute after:content-[''] after:top-5 after:left-[-8px] after:rotate-45 after:border-r-0 after:border-t-0 after:h-4 after:w-4 after:bg-white dark:after:bg-[#151515] after:border after:border-slate-200 dark:after:border-[#151515] after:hidden lg:after:block">
+            <p>
+              • Mining NFT’s for sale on the Avalanche ecosystem<br>
+              • $BIZ and $DOLLA liquidity established<br>
+              • Post launch marketing campaign begins 
+            </p>
+          </div>
+        </div>
+        <!-- row 3-->
+        <div class="relative pl-0 lg:pr-[50%] mb-8">
+          <!-- name -->
+          <div class="lg:absolute lg:top-4 lg:right-auto lg:left-[50%] mr-0 lg:ml-6 mb-3 lg:mb-0 text-[22px] font-semibold text-slate-900 dark:text-white">
+            <h5 class="">Post Launch</h5>
+            <span class="font-poppins block text-[15px]">Q1 2022</span>
+          </div>
+          <!-- Content -->
+          <div class="relative py-5 px-7 bg-white dark:bg-[#151515] border border-slate-200 dark:border-[#151515] rounded-lg shadow-card lg:mr-10 before:absolute before:content-[''] before:top-5 before:right-[-49px] before:w-5 before:h-5 before:rounded-full before:z-10 before:bg-white dark:before:bg-black-900 before:border-2 before:border-dashed before:border-blue-600 before:hidden lg:before:block after:absolute after:content-[''] after:top-5 after:right-[-8px] after:rotate-45 after:border-l-0 after:border-b-0 after:h-4 after:w-4 after:bg-white dark:after:bg-[#151515] after:border after:border-slate-200 dark:after:border-[#151515] after:hidden lg:after:block">
+            <p>
+              • Partnerships & Collaborations<br>
+              • Expand to other chains<br>
+              • Establish VMDao<br>
+              • CoinMarketCap listing<br>
+              • CoinGecko Listing 
+            </p>
+          </div>
+        </div>
+        <!-- row 4-->
+        <div class="relative pr-0 lg:pl-[50%] mb-8">
+          <!-- name -->
+          <div class="lg:absolute lg:top-4 lg:left-auto lg:right-[50%] mr-0 lg:mr-6 mb-3 lg:mb-0 text-[22px] font-semibold text-slate-900 dark:text-white">
+            <h5 class="">Even More Post Launch</h5>
+            <span class="font-poppins block text-[15px]">Q1 2022</span>
+          </div>
+          <!-- Content -->
+          <div class="relative py-5 px-7 bg-white dark:bg-[#151515] border border-slate-200 dark:border-[#151515] rounded-lg shadow-card lg:ml-10 before:absolute before:content-[''] before:top-5 before:left-[-52px] before:w-5 before:h-5 before:rounded-full before:z-10 before:bg-white dark:before:bg-black-900 before:border-2 before:border-dashed before:border-blue-600 before:hidden lg:before:block after:absolute after:content-[''] after:top-5 after:left-[-8px] after:rotate-45 after:border-r-0 after:border-t-0 after:h-4 after:w-4 after:bg-white dark:after:bg-[#151515] after:border after:border-slate-200 dark:after:border-[#151515] after:hidden lg:after:block">
+            <p>
+              • Gen 2 development <br>
+              • More Partnerships & Collaborations 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Road Map -->
+
+    <!-- Exchange -->
+  <section class="bg-white-200 dark:bg-none dark:bg-black-500 py-[60px] sm:py-[80px] lg:py-[100px]">
+    <div class="container">
+      <div class="text-center xl:w-1/2 m-auto">
+        <span class="text-pink-600 text-[16px] font-normal uppercase mb-4 block">Our Exchanges </span>
+        <h2 class="text-[26px] leading-[26px] sm:text-[34px] sm:leading-[44px] md:text-[40px] md:leading-[52px] text-slate-900 dark:text-white font-semibold  mb-5">Biz & Dolla</h2>
+        <p class="text-lg leading-7 font-normal">Click at the images to visit the exchanges for $biz and $dolla.</p>
+      </div>
+      <!-- row -->
+      <div class="md:flex justify-between text-center mt-14 gap-9">
+        <!-- card -->
+        <div class="md:w-4/12 p-6 bg-white dark:bg-[#191919] border border-transparent dark:border-[#252525] rounded-lg mb-8 md:mb-0 wow animate__animated animate__fadeInUp" data-wow-delay=".2s" data-wow-offset="10">
+          <div class="max-w-[130px] m-auto">
+            <img class="m-auto w-full" src="./dist/images/pangolin.png" alt="pangolin">
+          </div>
+            <p class="text-lg leading-7 font-normal">Pangolin Exchange</p>
+        </div>
+        <!-- card -->
+        <div class="md:w-4/12 p-6 bg-white dark:bg-[#191919] border border-transparent dark:border-[#252525] rounded-lg mb-8 md:mb-0  wow animate__animated animate__fadeInUp" data-wow-delay=".4s" data-wow-offset="10">
+          <div class="max-w-[130px] m-auto">
+            <img class="m-auto w-full" src="./dist/images/joe.png" alt="Joi">
+          </div>
+            <p class="text-lg leading-7 font-normal">TraderJoe Exchange</p>
+        </div>
+        <!-- card -->
+        <div class="md:w-4/12 p-6 bg-white dark:bg-[#191919] border border-transparent dark:border-[#252525] rounded-lg mb-8 md:mb-0 wow animate__animated animate__fadeInUp" data-wow-delay=".6s" data-wow-offset="10">
+          <div class="max-w-[130px] m-auto ">
+            <img class="m-auto w-full" src="./dist/images/lyd.png" alt="Lydia Exchange">
+          </div>
+            <p class="text-lg leading-7 font-normal">Lydia Exchange</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Exchange -->
+
+  <!-- Footer -->
+  <footer class="py-10 bg-white dark:bg-black-900 text-center">
+    <div class="container">
+      <div>
+        <p class="text-slate-900 dark:text-white font-medium text-[17px] mb-4 md:mb-1">Our Avalanche Contracts:</p>
+        <p class="flex justify-center items-center gap-1 mb-4 md:mb-1 flex-wrap break-all">Tycoons:
+          <a href="#">0x5496B2E166CE7ecBa67c526F2BABcCfCc0d3880d</a>
+          <a href="#">
+            <!-- icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 animate-none" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" />
+            </svg>
+          </a>
+        </p>
+        <p class="flex justify-center items-center gap-1 mb-4 md:mb-1  flex-wrap break-all">Businesses:
+          <a href="#"> 0x15c841043e13fFAA9a99FabEa236D40F45615623</a>
+          <a href="#">
+            <!-- icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 animate-none" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" />
+            </svg>
+          </a>
+        </p>
+        <p class="flex justify-center items-center gap-1 mb-4 md:mb-1 flex-wrap break-all">Dolla:
+          <a href="#"> 0x4B322765D761984C0f9E72200B62a9b445F38caC</a>
+          <a href="#">
+            <!-- icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 animate-none" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" />
+            </svg>
+          </a>
+        </p>
+      </div>
+      <ul class="flex justify-center items-center mt-10 gap-5">
+        <li>
+          <a href="#" class="icon block">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 fill-current hover:fill-pink-600" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="icon block">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 fill-current hover:fill-pink-600" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="icon block">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 fill-current hover:fill-pink-600" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"/></svg>
+          </a>
+        </li>
+      </ul>
+      <p class="break-word mt-10">
+        Copyright 2022 by vmtycoon.io · 
+        <a class="underline" href="mailto:contact@vmtycoon.io">contact@vmtycoon.io </a>
+        · A <a class="underline" href="https://minerjoe.com/">MinerJoe</a> Collaboration
+      </p>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+  <!-- Scroll to top button -->
+  <a href="#" id="scrollTop" class="bg-[#00baff] opacity-40 hover:opacity-100 bg-arrow-up bg-no-repeat bg-center rounded-full h-[50px] w-[30px] flex hover:text-white transition-all duration-300 fixed -right-96 bottom-8" style="background-size: 15px;">
+  </a>
+  <!-- Scroll to top button -->
+
   <!-- MAIN JS -->
   <script src="./dist/main.js"></script>
+  <!-- WOW JS -->
   <script src="./node_modules/wow.js/dist/wow.min.js"></script>
   <script>
     new WOW().init();

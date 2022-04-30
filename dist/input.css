@@ -33,9 +33,10 @@ p {
   @apply leading-7
 }
 
-a svg {
+a.btn svg {
   animation:  2s infinite arrowanim;
 }
+
 
 a:hover span {
   right: -80px;
@@ -47,6 +48,10 @@ header.sticky {
 
 .dark header.sticky {
   @apply  bg-black h-[65px]
+}
+
+#scrollTop.show {
+  @apply right-8 transition-all duration-300;
 }
 
 #menu-toggler.active span {

@@ -6,6 +6,12 @@ window.onscroll = function() {
   } else {
     Header.classList.remove('sticky')
   }
+  // show scroll to top button when scrolling
+  if(this.scrollY > 600) {
+  document.querySelector('#scrollTop').classList.add('show')
+  } else {
+    document.querySelector('#scrollTop').classList.remove('show')
+  }
 }
 
 // Toggle Dark Mode
@@ -48,5 +54,8 @@ mobileMenu.addEventListener('click', function (e) {
 });
 document.querySelector('.nav-wrapper .nav').addEventListener('click', function(e) {
     e.stopPropagation();
-  });
+});
+
+
+
 
