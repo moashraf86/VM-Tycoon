@@ -542,6 +542,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: 0px;
 }
 
+.top-\[-10\%\] {
+  top: -10%;
+}
+
+.right-\[-130px\] {
+  right: -130px;
+}
+
 .top-\[20\%\] {
   top: 20%;
 }
@@ -552,14 +560,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .top-\[80\%\] {
   top: 80%;
-}
-
-.top-\[-10\%\] {
-  top: -10%;
-}
-
-.right-\[-130px\] {
-  right: -130px;
 }
 
 .-right-96 {
@@ -713,6 +713,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 35px;
 }
 
+.h-\[200px\] {
+  height: 200px;
+}
+
 .h-\[30px\] {
   height: 30px;
 }
@@ -745,10 +749,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1.25rem;
 }
 
-.h-\[200px\] {
-  height: 200px;
-}
-
 .h-\[80px\] {
   height: 80px;
 }
@@ -763,6 +763,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[35px\] {
   width: 35px;
+}
+
+.w-\[200px\] {
+  width: 200px;
 }
 
 .w-\[30px\] {
@@ -797,10 +801,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-5 {
   width: 1.25rem;
-}
-
-.w-\[200px\] {
-  width: 200px;
 }
 
 .w-full {
@@ -997,13 +997,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[rgb\(255\2c 255\2c 255\2c \.2\)\] {
+  background-color: rgb(255,255,255,.2);
+}
+
 .bg-black-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(16 16 16 / var(--tw-bg-opacity));
-}
-
-.bg-\[rgb\(255\2c 255\2c 255\2c \.2\)\] {
-  background-color: rgb(255,255,255,.2);
 }
 
 .bg-white-200 {
