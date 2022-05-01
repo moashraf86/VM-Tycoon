@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./index.html", "./marketplace.html"],
+  content: ["./index.html", "./marketplace.html", "./help.html"],
   theme: {
     extend: {
       colors: {
@@ -42,13 +42,15 @@ module.exports = {
         'section-gradient' :  'linear-gradient(to bottom, #fff6f3 0%,#fffefb 100%)',
         'pseudo-gradient'  :  'linear-gradient(to right, #007bff 0%,#ff1f8e 100%)',
         'cursor-gradient'  : 'linear-gradient(to right, #ffbd84 0%,#ff1f8e 100%)',
-        'rarity-gradient'  : 'linear-gradient(to bottom, #e4fffe 0%,#ffedf3 100%)'
+        'rarity-gradient'  : 'linear-gradient(to bottom, #e4fffe 0%,#ffedf3 100%)',
+        'card-progress'    : 'linear-gradient(135deg, #9100ff 0%,#3663ff 54%,#00e2ff 100%)'
       },
       boxShadow: {
-        'btn'   : '0 10px 15px 0px rgb(56 0 189 / 20%)',
-        'card'  : '0 3.4px 2.7px -30px rgba(0, 0, 0, 0.059), 0 8.2px 8.9px -30px rgba(0, 0, 0, 0.071), 0 25px 40px -30px rgba(0, 0, 0, 0.2)',
-        'image' : '-20px 20px 35px #dcdcdc, 20px -40px 35px #ffffff',
-        'dropdown' : '0 0.625rem 2.5rem 0.625rem rgba(140,152,164,0.175)'
+        'btn'      : '0 10px 15px 0px rgb(56 0 189 / 20%)',
+        'card'     : '0 3.4px 2.7px -30px rgba(0, 0, 0, 0.059), 0 8.2px 8.9px -30px rgba(0, 0, 0, 0.071), 0 25px 40px -30px rgba(0, 0, 0, 0.2)',
+        'image'    : '-20px 20px 35px #dcdcdc, 20px -40px 35px #ffffff',
+        'dropdown' : '0 0.625rem 2.5rem 0.625rem rgba(140,152,164,0.175)',
+        'NFT-body' : '0 3.4px 2.7px -30px rgb(0 0 0 / 6%), 0 8.2px 8.9px -30px rgb(0 0 0 / 7%), 0 25px 40px -30px rgb(0 0 0 / 20%)'
       },
       zIndex: {
         '9999': 'z-index: 9999'

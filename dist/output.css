@@ -618,6 +618,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: -0.75rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -728,6 +733,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-1 {
   margin-bottom: 0.25rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .box-border {
@@ -896,6 +909,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 18px;
 }
 
+.w-\[95\%\] {
+  width: 95%;
+}
+
 .min-w-max {
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
@@ -926,6 +943,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 130px;
 }
 
+.max-w-\[80px\] {
+  max-width: 80px;
+}
+
 .flex-auto {
   flex: 1 1 auto;
 }
@@ -936,6 +957,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .translate-x-\[-300px\] {
   --tw-translate-x: -300px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-10 {
+  --tw-translate-y: -2.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -998,18 +1024,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-10 {
   gap: 2.5rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.gap-3 {
-  gap: 0.75rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
 }
 
 .self-center {
@@ -1104,6 +1118,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-bottom-right-radius: 0.5rem;
 }
 
+.rounded-tl-\[40px\] {
+  border-top-left-radius: 40px;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1114,10 +1132,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-r-0 {
   border-right-width: 0px;
-}
-
-.border-l-0 {
-  border-left-width: 0px;
 }
 
 .border-solid {
@@ -1155,11 +1169,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-transparent {
   border-color: transparent;
-}
-
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .border-slate-400 {
@@ -1566,6 +1575,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(230 230 230 / var(--tw-text-opacity));
 }
 
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(162 162 162 / var(--tw-text-opacity));
+}
+
+.text-black-400 {
+  --tw-text-opacity: 1;
+  color: rgb(30 32 34 / var(--tw-text-opacity));
+}
+
+.text-slate-500 {
+  --tw-text-opacity: 1;
+  color: rgb(166 175 189 / var(--tw-text-opacity));
+}
+
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -1606,6 +1630,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .shadow-dropdown {
   --tw-shadow: 0 0.625rem 2.5rem 0.625rem rgba(140,152,164,0.175);
   --tw-shadow-colored: 0 0.625rem 2.5rem 0.625rem var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-NFT-body {
+  --tw-shadow: 0 3.4px 2.7px -30px rgb(0 0 0 / 6%), 0 8.2px 8.9px -30px rgb(0 0 0 / 7%), 0 25px 40px -30px rgb(0 0 0 / 20%);
+  --tw-shadow-colored: 0 3.4px 2.7px -30px var(--tw-shadow-color), 0 8.2px 8.9px -30px var(--tw-shadow-color), 0 25px 40px -30px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1656,6 +1686,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.duration-1000 {
+  transition-duration: 1000ms;
 }
 
 .ease-in-out {
@@ -2120,6 +2154,11 @@ header.move-left {
   height: 1rem;
 }
 
+.after\:h-1::after {
+  content: var(--tw-content);
+  height: 0.25rem;
+}
+
 .after\:w-full::after {
   content: var(--tw-content);
   width: 100%;
@@ -2138,6 +2177,11 @@ header.move-left {
 .after\:w-4::after {
   content: var(--tw-content);
   width: 1rem;
+}
+
+.after\:w-0::after {
+  content: var(--tw-content);
+  width: 0px;
 }
 
 .after\:rotate-45::after {
@@ -2219,6 +2263,11 @@ header.move-left {
   background-image: url("../dist/images/shape-1.svg");
 }
 
+.after\:bg-card-progress::after {
+  content: var(--tw-content);
+  background-image: linear-gradient(135deg, #9100ff 0%,#3663ff 54%,#00e2ff 100%);
+}
+
 .after\:bg-auto::after {
   content: var(--tw-content);
   background-size: auto;
@@ -2229,9 +2278,31 @@ header.move-left {
   background-repeat: no-repeat;
 }
 
+.after\:transition-all::after {
+  content: var(--tw-content);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.after\:duration-\[1\.2s\]::after {
+  content: var(--tw-content);
+  transition-duration: 1.2s;
+}
+
 .after\:content-\[\'\'\]::after {
   --tw-content: '';
   content: var(--tw-content);
+}
+
+.hover\:-translate-y-1:hover {
+  --tw-translate-y: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:-translate-y-2:hover {
+  --tw-translate-y: -0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:border-neutral-100:hover {
@@ -2274,6 +2345,11 @@ header.move-left {
 
 .hover\:opacity-100:hover {
   opacity: 1;
+}
+
+.hover\:after\:w-full:hover::after {
+  content: var(--tw-content);
+  width: 100%;
 }
 
 .dark .dark\:border-white\/30 {
@@ -2328,11 +2404,6 @@ header.move-left {
 .dark .dark\:bg-black-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(21 21 21 / var(--tw-bg-opacity));
-}
-
-.dark .dark\:bg-neutral-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:bg-none {
@@ -2414,21 +2485,6 @@ header.move-left {
   background-color: rgb(35 35 35 / var(--tw-bg-opacity));
 }
 
-.dark .dark\:hover\:bg-neutral-800:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
-}
-
-.dark .dark\:hover\:bg-neutral-100:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
-}
-
-.dark .dark\:hover\:bg-\[\#171717\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
-}
-
 .dark .dark\:hover\:bg-\[\#292929\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(41 41 41 / var(--tw-bg-opacity));
@@ -2496,10 +2552,6 @@ header.move-left {
 
   .md\:w-4\/12 {
     width: 33.333333%;
-  }
-
-  .md\:w-3\/12 {
-    width: 25%;
   }
 
   .md\:px-4 {
@@ -2637,10 +2689,6 @@ header.move-left {
     width: 66.666667%;
   }
 
-  .lg\:w-1\/2 {
-    width: 50%;
-  }
-
   .lg\:w-3\/4 {
     width: 75%;
   }
@@ -2693,6 +2741,11 @@ header.move-left {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .lg\:leading-\[57px\] {
