@@ -12,7 +12,36 @@
   <!-- Output CSS /don't change this/ -->
   <link rel="stylesheet" href="./dist/output.css">
 </head>
-<body class="font-openSans text-slate-600 dark:text-gray-400 overflow-x-clip">
+<body class="relative font-openSans text-slate-600 dark:text-gray-400 overflow-x-clip">
+  <!-- Modal popup-->
+    <div id="modal-wrapper" class="hidden fixed z-[9999] top-0 right-0 left-0 bottom-0 px-4 bg-black-900/90">
+      <div id="modal" class="bg-white dark:bg-black-900 p-7 rounded-lg border border-white w-full max-w-[600px] mt-4 mx-auto ">
+        <div class="flex justify-between items-center mb-10">
+          <h4 class="text-xl font-semibold leading-7 text-slate-900 dark:text-white">Setting</h4>
+          <div id="close_modal" class="cursor-pointer w-12 h-12 flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 fill-current hover:fill-black-900 dark:hover:fill-white" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        </div>
+        <div class="content mb-4">
+          <p class="font-bold text-lg mb-2">Address: <span>0</span></p>
+          <p class="font-bold text-lg mb-2">Balance: <span>0</span></p>
+          <p class="font-bold text-lg mb-2">Username: <span>unknown</span></p>
+        </div>
+        <form method="post">
+          <input class="p-4 outline-2 outline outline-slate-200 dark:bg-black-900 dark:outline-[#404040] rounded-lg w-full" type="email" name="email" id="email" placeholder="usernaame">
+          <button class="px-2 py-5 mt-4 bg-blue-gradient font-poppins font-normal text-[15px] text-white w-full rounded-2xl" type="button">Update</button>
+        </form>
+      </div>
+    </div>
+  <!-- Modal popup -->
+
+  <!-- Mouse Cursor -->
+  <div class="cursor point fixed left-0 top-0 pointer-events-none rounded-[50%] w-2 h-2 -ml-1 -mt-1 z-[9999] bg-cursor-gradient opacity-90 transition-all ease-in-out duration-75 hidden lg:block"></div>
+  <div class="cursor cursor-border fixed left-0 top-0 pointer-events-none rounded-[50%] border border-cursor w-[38px] h-[38px] -ml-[18px] -mt-[19px] z-[9999] opacity-90 transition-all ease-in-out duration-75 hidden lg:block"></div>
+  <!-- Mouse Cursor -->
+
   <!-- Header -->
   <header id="header" class="h-[85px] flex items-center fixed top-0 right-0 left-0 z-50 border-b border-white/10 transition-all duration-[1s]">
     <div class="container">
@@ -20,14 +49,20 @@
         <!-- LGOG -->
         <div class="logo"></div>
         <!-- Desktop nav -->
-        <div class="flex justify-between items-center">
-          <ul class="items-center font-poppins hidden lg:flex">
-            <li class="inline-flex"><a class="relative text-md text-slate-900 dark:text-slate-200 uppercase font-medium px-4" href="#">Home</a></li>
-            <li class="inline-flex"><a class="relative text-md text-slate-900 dark:text-slate-200 uppercase font-medium px-4" href="../marketplace">Marketplace</a></li>
-            <li class="inline-flex"><a class="relative text-md text-slate-900 dark:text-slate-200 uppercase font-medium px-4" href="../office">Office</a></li>
-            <li class="inline-flex"><a class="relative text-md text-slate-900 dark:text-slate-200 uppercase font-medium px-4" href="../toplist">Toplist</a></li>
-            <li class="inline-flex"><a class="relative text-md text-slate-900 dark:text-slate-200 uppercase font-medium px-4" href="#">Budget</a></li>
-            <li class="inline-flex"><a class="relative text-md text-slate-900 dark:text-slate-200 uppercase font-medium px-4" href="../help">Help</a></li>
+        <div class="flex justify-between items-cente items-stretch">
+          <ul class="items-cente font-poppins hidden lg:flex items-stretch">
+            <li class="inline-flex ">
+              <a class="leading-[50px] relative text-md text-slate-900 dark:text-slate-200 uppercase font-medium px-4" href="#">Home</a></li>
+            <li class="inline-flex">
+              <a class="leading-[50px] relative text-md text-slate-900 dark:text-slate-200 uppercase font-medium px-4" href="../marketplace">Marketplace</a></li>
+            <li class="inline-flex">
+              <a class="leading-[50px] relative text-md text-slate-900 dark:text-slate-200 uppercase font-medium px-4" href="../office">Office</a></li>
+            <li class="inline-flex">
+              <a class="leading-[50px] relative text-md text-slate-900 dark:text-slate-200 uppercase font-medium px-4" href="../toplist">Toplist</a></li>
+            <li class="inline-flex">
+              <a class="leading-[50px] relative text-md text-slate-900 dark:text-slate-200 uppercase font-medium px-4" href="#">Budget</a></li>
+            <li class="inline-flex">
+              <a class="leading-[50px] relative text-md text-slate-900 dark:text-slate-200 uppercase font-medium px-4" href="../help">Help</a></li>
           </ul>
           <!-- dark mode Control & connect btn -->
           <ul class="flex items-center gap-1">
@@ -40,7 +75,7 @@
               </div>
             </li>
             <li class="inline-flex">
-              <a href="#" class="relative text-sm font-openSans font-normal px-5 leading-9 rounded-[100px] bg-blue-gradient text-white shadow-btn overflow-clip">
+              <a href="#" id="connect_wallet" class="relative text-sm font-openSans font-normal px-5 leading-9 rounded-[100px] bg-blue-gradient text-white shadow-btn overflow-clip">
                 Connect Wallet
                 <span class="block absolute top-[-10%] right-[-130px] w-[200px] h-[200px] rounded-[50%] bg-[rgb(255,255,255,.2)] duration-[1s] transition-all"></span>
               </a>

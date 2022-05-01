@@ -14,7 +14,8 @@ module.exports = {
         'black-500'  : '#151515', 
         'black-900'  : '#101010', 
         'white-200'  : '#fafaff',
-        'white'      : '#FFFFFF'
+        'white'      : '#FFFFFF',
+        'cursor' : '#ffbd84'
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
@@ -31,7 +32,8 @@ module.exports = {
         'red-gradient'     : 'linear-gradient(to right, #f92c8b 0%,#b02cd6 100%)',
         'heading-gradient' : 'linear-gradient(to right, #673AB7 0%,#E91E63 36%,#E91E63 65%,#673AB7 100%)',
         'section-gradient' :  'linear-gradient(to bottom, #fff6f3 0%,#fffefb 100%)',
-        'pseudo-gradient'  :  'linear-gradient(to right, #007bff 0%,#ff1f8e 100%)'
+        'pseudo-gradient'  :  'linear-gradient(to right, #007bff 0%,#ff1f8e 100%)',
+        'cursor-gradient'  : 'linear-gradient(to right, #ffbd84 0%,#ff1f8e 100%)'
       },
       boxShadow: {
         'btn'   : '0 10px 15px 0px rgb(56 0 189 / 20%)',

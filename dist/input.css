@@ -46,10 +46,25 @@ header.sticky {
   @apply  bg-white h-[65px]
 }
 
+header.move-left {
+  @apply pr-9
+}
+
 .dark header.sticky {
   @apply  bg-black h-[65px]
 }
 
+.cursor.cursor-border.hover {
+  @apply hidden
+}
+
+.cursor.point.hover {
+  @apply -ml-10 -mt-10 w-20 h-20 bg-cursor opacity-20
+}
+
+.cursor.hover {
+  @apply duration-300
+}
 #scrollTop.show {
   @apply right-8 transition-all duration-300;
 }
