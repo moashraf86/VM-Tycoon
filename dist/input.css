@@ -65,6 +65,24 @@ header.move-left {
 .cursor.hover {
   @apply duration-300
 }
+
+.pagination li.active a {
+  @apply bg-blue-700 text-white border-t-blue-700 border-b-blue-700
+}
+
+@media screen and (max-width: 767px) {
+  .pagination li a {@apply hidden}
+
+  .pagination li.active a,
+  .pagination li.active + li a ,
+  .pagination li.prev a,
+  .pagination li.next a{
+  @apply flex 
+  }
+
+}
+
+
 #scrollTop.show {
   @apply right-8 transition-all duration-300;
 }

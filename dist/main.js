@@ -117,5 +117,31 @@ document.querySelectorAll('a').forEach(link => {
       cursor.style.transitionDuration = `${300}ms`
     })
   });
-})
+});
 
+
+// Run dropdown menu
+const menuBtn = document.querySelectorAll('#menu-button');
+menuBtn.forEach(btn => {
+  btn.addEventListener('click', function() {
+    const nextElem = this.nextElementSibling;
+    nextElem.classList.toggle('hidden');
+    this.classList.toggle('focused');
+    this.parentElement.classList.toggle('relative')
+  })
+});
+
+// close dropdown when click any where else on the page
+document.addEventListener('click', function(e) {
+  if(e.target.id !== 'menu-button' & e.target.id !== 'search') {
+    const menuBtn = document.querySelectorAll('#menu-button');
+    menuBtn.forEach(btn => {
+        const nextElem = btn.nextElementSibling;
+        nextElem.classList.add('hidden');
+        btn.classList.remove('focused');
+        btn.parentElement.classList.remove('relative')
+    });
+  } else {
+    return 1
+  }
+});
