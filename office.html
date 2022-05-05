@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;900&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
   <!-- Animate CSS -->
-  <link rel="stylesheet" href="./node_modules/animate-css/animate.min.css">
+  <link rel="stylesheet" href="./dist/animate.min.css">
   <!-- Output CSS /don't change this/ -->
   <link rel="stylesheet" href="./dist/output.css">
 </head>
@@ -52,7 +52,7 @@
         <div class="flex justify-between items-cente items-stretch">
           <ul class="items-cente font-poppins hidden lg:flex items-stretch">
             <li class="inline-flex ">
-              <a class="leading-[50px] relative text-md text-slate-900 dark:text-slate-200 uppercase font-medium px-4" href="#">Home</a></li>
+              <a class="leading-[50px] relative text-md text-slate-900 dark:text-slate-200 uppercase font-medium px-4" href="./index.html">Home</a></li>
             <li class="inline-flex">
               <a class="leading-[50px] relative text-md text-slate-900 dark:text-slate-200 uppercase font-medium px-4" href="./marketplace.html">Marketplace</a></li>
             <li class="inline-flex">
@@ -98,12 +98,12 @@
     <div class="nav  fixed h-full top-0 left-0 w-[280px] z-[9999] bg-black-900 translate-x-[-300px] transition-transform duration-300">
       <h2 class="text-black-900 bg-white px-5 py-4 text-xl font-poppins font-normal">Mobile Menu</h2>
       <ul class="nav-links">
-        <li><a href="#" class="block p-4 text-white text-sm ">Home</a></li>
-        <li><a href="#" class="block p-4 text-white text-sm ">Marketplace</a></li>
+        <li><a href="./index.html" class="block p-4 text-white text-sm ">Home</a></li>
+        <li><a href="./marketplace.html" class="block p-4 text-white text-sm ">Marketplace</a></li>
         <li><a href="#" class="block p-4 text-white text-sm ">Office</a></li>
-        <li><a href="#" class="block p-4 text-white text-sm ">Toplist</a></li>
+        <li><a href="./toplist.html" class="block p-4 text-white text-sm ">Toplist</a></li>
         <li><a href="#" class="block p-4 text-white text-sm ">Budget</a></li>
-        <li><a href="#" class="block p-4 text-white text-sm ">Help</a></li>
+        <li><a href="./help.html" class="block p-4 text-white text-sm ">Help</a></li>
       </ul>
       <div id="close" class="absolute top-0 right-0 w-[60px] h-[60px] flex justify-center items-center hover:bg-black-900 text-black-900 hover:text-white cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
@@ -120,7 +120,7 @@
       <!-- row -->
       <div class="md:flex justify-between text-center mt-14 gap-9">
         <!-- wallet -->
-        <div class="relative overflow-hidden md:w-1/2 px-5 py-7 md:px-4 md:py-12 gap-5 bg-white dark:bg-[#191919] border border-[#d4f0ff] dark:border-[#191919] rounded-lg mb-8 md:mb-0 shadow-card wow animate__animated animate__fadeInUp hover:-translate-y-1 transition-all ease-in-out duration-[1s] after:absolute after:content-[''] after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-1 after:bg-card-progress after:transition-all after:duration-[1.2s]" data-wow-delay=".2s" data-wow-offset="10">
+        <div class="relative overflow-hidden md:w-1/2 px-5 py-7 md:px-4 md:py-12 gap-5 bg-white dark:bg-[#191919] border border-[#d4f0ff] dark:border-[#191919] rounded-lg mb-8 md:mb-0 shadow-card wow animate__animated animate__fadeInUp hover:-translate-y-1 transition-transform ease-in-out duration-[1s] after:absolute after:content-[''] after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-1 after:bg-card-progress after:transition-all after:duration-[1.2s]" data-wow-delay=".2s" data-wow-offset="10">
           <div class="max-w-[80px] m-auto mb-5">
             <img class="m-auto w-full" src="./dist/images/businesses-head.png" alt="business">
           </div>
@@ -166,7 +166,7 @@
           </ul>
         </div>
         <!-- wallet -->
-        <div class="relative overflow-hidden md:w-1/2 px-5 py-7 md:px-4 md:py-12 gap-5 bg-white dark:bg-[#191919] border border-[#d4f0ff] dark:border-[#191919] rounded-lg mb-8 md:mb-0 shadow-card wow animate__animated animate__fadeInUp hover:-translate-y-1 transition-all ease-in-out duration-[1s] after:absolute after:content-[''] after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-1 after:bg-card-progress after:transition-all after:duration-[1.2s]" data-wow-delay=".4s" data-wow-offset="10">
+        <div class="relative overflow-hidden md:w-1/2 px-5 py-7 md:px-4 md:py-12 gap-5 bg-white dark:bg-[#191919] border border-[#d4f0ff] dark:border-[#191919] rounded-lg mb-8 md:mb-0 shadow-card wow animate__animated animate__fadeInUp hover:-translate-y-1 transition-transform ease-in-out duration-[1s] after:absolute after:content-[''] after:left-0 after:bottom-0 after:w-0 hover:after:w-full after:h-1 after:bg-card-progress after:transition-all after:duration-[1.2s]" data-wow-delay=".4s" data-wow-offset="10">
           <div class="max-w-[80px] m-auto mb-5">
             <img class="m-auto w-full" src="./dist/images/dollar-head.png" alt="dollar">
           </div>
@@ -565,7 +565,7 @@
   <!-- MAIN JS -->
   <script src="./dist/main.js"></script>
   <!-- WOW JS -->
-  <script src="./node_modules/wow.js/dist/wow.min.js"></script>
+  <script src="./dist/wow.min.js"></script>
   <script>
     new WOW().init();
   </script>

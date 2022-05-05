@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./index.html", "./marketplace.html", "./help.html"],
+  content: ["./index.html", "./marketplace.html", "./office.html", "./toplist.html"],
   theme: {
     extend: {
       colors: {
@@ -15,7 +15,9 @@ module.exports = {
         'black-400'  : '#1e2022 ', 
         'black-500'  : '#151515', 
         'black-900'  : '#101010', 
+        'black-table': '#3c4043', 
         'white-200'  : '#fafaff',
+        'white-500'  : '#f5f5ff',
         'white'      : '#FFFFFF',
         'cursor'     : '#ffbd84',
         'common'     : '#7f7f80',
@@ -23,7 +25,9 @@ module.exports = {
         'rare'       : '#0248d5',
         'legendary'  : '#6502b6',
         'exotic'     : '#FFB700',
-        'active'     : '#2250fc'
+        'active'     : '#2250fc',
+        't-border'   : '#e4e6ef',
+    
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
@@ -43,7 +47,10 @@ module.exports = {
         'pseudo-gradient'  :  'linear-gradient(to right, #007bff 0%,#ff1f8e 100%)',
         'cursor-gradient'  : 'linear-gradient(to right, #ffbd84 0%,#ff1f8e 100%)',
         'rarity-gradient'  : 'linear-gradient(to bottom, #e4fffe 0%,#ffedf3 100%)',
-        'card-progress'    : 'linear-gradient(135deg, #9100ff 0%,#3663ff 54%,#00e2ff 100%)'
+        'card-progress'    : 'linear-gradient(135deg, #9100ff 0%,#3663ff 54%,#00e2ff 100%)',
+        'breadcrumb'       : 'linear-gradient(135deg, #ffdee9 0%,#c8fff4  100%)',
+        'breadcrumb-img'    : 'url("../dist/images/breadcrumb-bg.jpg")',
+        'breadcrumb-shap'  : 'url("../dist/images/banner-shap-2.png")'
       },
       boxShadow: {
         'btn'      : '0 10px 15px 0px rgb(56 0 189 / 20%)',
@@ -57,6 +64,23 @@ module.exports = {
       },
       transition: {
         'overlay-trans': 'transition: 1.2s cubic-bezier(.17, .85, .438, .99)'
+      },
+      borderRadius: {
+        'bubble' : '68% 32% 64% 36% / 59% 59% 41% 41%'
+      },
+      keyframes: {
+        borderTransform :{
+        '0%,100%': { borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%;' },
+        '14%' :{ borderRadius: '40% 60% 54% 46% / 49% 60% 40% 51%;' },
+        '28%' :{ borderRadius: '54% 46% 38% 62% / 49% 70% 30% 51%;' },
+        '42%' :{ borderradius: '61% 39% 55% 45% / 61% 38% 62% 39%;' },
+        '56%' :{ borderRadius: '61% 39% 67% 33% / 70% 50% 50% 30%;' },
+        '70%' :{ borderRadius: '50% 50% 34% 66% / 56% 68% 32% 44%;' },
+        '84%' :{ borderRadius: '46% 54% 50% 50% / 35% 61% 39% 65%;' }
+        }
+      },
+      animation: {
+        borderTransform : 'borderTransform 6s linear infinite'
       }
     },
     container: {
