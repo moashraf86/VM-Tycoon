@@ -2,18 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-animation {
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: hue 6s infinite linear;
-    animation: hue 6s infinite linear;
+/* Scroll bar style */
+body::-webkit-scrollbar {
+  width: 3px;
+} 
+
+.table-wrapper::-webkit-scrollbar {
+  height: 5px;
+} 
+
+body::-webkit-scrollbar-track ,
+.table-wrapper::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-/* a {
-  box-shadow: 0 10px 15px 0px rgb(56 0 189 / 20%);
-} */
+html.dark body::-webkit-scrollbar-track ,
+html.dark .table-wrapper::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+body::-webkit-scrollbar-thumb,
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, #ffbd84 0%,#ff1f8e 100%);
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: linear-gradient(to left, #ffbd84 0%,#ff1f8e 100%);
+}
 
 h1,
 h2,
@@ -54,6 +69,7 @@ header.move-left {
   @apply  bg-black h-[65px]
 }
 
+
 .cursor.cursor-border.hover {
   @apply hidden
 }
@@ -62,13 +78,19 @@ header.move-left {
   @apply -ml-10 -mt-10 w-20 h-20 bg-cursor opacity-20
 }
 
-.cursor.hover {
-  @apply duration-300
+
+.cursor {
+  transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out, transform 75ms ease-out;
+}
+
+.cursor.cursor-border {
+  transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out, transform 100ms ease-out;
 }
 
 .pagination li.active a {
   @apply bg-blue-700 text-white border-t-blue-700 border-b-blue-700
 }
+
 
 @media screen and (max-width: 767px) {
   .pagination li a {@apply hidden}
@@ -111,6 +133,16 @@ header.move-left {
 .nav-wrapper.show .nav {
   transform: translate3d(0,0,0) !important;
 }
+
+.text-animation {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 6s infinite linear;
+    animation: hue 6s infinite linear;
+}
+
 @keyframes hue {
 from {background-position:0 0;  }
 to {background-position: 2000px 0;} }

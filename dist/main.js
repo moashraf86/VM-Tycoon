@@ -96,7 +96,7 @@ document.addEventListener('mousemove', function(e) {
   var curY = e.clientY;
   document.querySelectorAll('.cursor').forEach(cursor => {
     cursor.style.transform = `translate(${curX}px, ${curY}px)`
-    cursor.style.transitionDuration = `${75}ms`
+    // cursor.style.transitionDuration = `${75}ms`
   });
 });
 
@@ -106,7 +106,7 @@ document.querySelectorAll('a').forEach(link => {
   link.addEventListener('mouseover', function() {
     document.querySelectorAll('.cursor').forEach(cursor => {
       cursor.classList.add('hover');
-      cursor.style.transitionDuration = `${300}ms`
+      // cursor.style.transitionDuration = `${300}ms`
     })
   });
 
@@ -114,7 +114,7 @@ document.querySelectorAll('a').forEach(link => {
     link.addEventListener('mouseleave', function() {
     document.querySelectorAll('.cursor').forEach(cursor => {
       cursor.classList.remove('hover');
-      cursor.style.transitionDuration = `${300}ms`
+      // cursor.style.transitionDuration = `${300}ms`
     })
   });
 });
